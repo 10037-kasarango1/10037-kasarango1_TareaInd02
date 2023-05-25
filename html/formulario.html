@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: url("../img/fondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  form {
+    margin: auto;
+    width: 50%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6%;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: purple;
+    font-family: Arial, sans-serif;
+  }
+
+  input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 30px 0;
+    font-size: 20px;
+    color: #333;
+  }
+
+  input[type=submit] {
+    background: linear-gradient(red, purple);
+    border: 0;
+    color: #fff;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 0;
+  }
+
+  input[type=submit]:active {
+    transform: scale(0.95);
+  }
+
+  input[type=password]::-webkit-input-placeholder {
+    color: #999; 
+  }
+
+  .icono {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    color: purple;
+  }
+  .forgot-password {
+    text-align: right;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 780px) {
+    form {
+      width: 95%;
+    }
+  }
+</style>
+
+<body>
+  <form>
+    <h2><b>Formulario de Login</b></h2>
+
+    <span class="glyphicon glyphicon-book icono"></span>
+
+    <input type="text" name="usuario" id="usuario" placeholder="&#9000; Usuario" required>
+    <input type="password" name="contraseña" id="contraseña" placeholder="&#128272; Contraseña" required>
+
+
+    <input type="submit" name="enviar" value="Ingresar" id="enviar">
+
+
+    <div class="forgot-password">
+      <a href="#">¿Olvidó su contraseña?</a>
+    </div>
+  </form>
+
+  <script src="../js/validacion.js"></script>
+</body>
+</html>
